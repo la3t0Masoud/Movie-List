@@ -61,13 +61,12 @@ function Home() {
         ? (<div className="loading">
             Loading...
         </div>
-        ):(<div className="movie-grid">
+        ):(<div className="movies-grid">
             {movies.map((movie) => (
             <MovieCard movie={movie} key={movie.id} />
             ))}
         </div>
         )}
-      
     </div>
   )
 }
