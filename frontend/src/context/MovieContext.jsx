@@ -8,12 +8,16 @@ export const MovieProvider = ({children}) => {
     const[favorites, setFavorites] = useState([])
 
     useEffect(()=>{
-        const storedFavs = localStorage.getItem("favorites")
-        if(storedFavs) setFavorites(JSON.parse(storedFavs))
+        
+        const storedFavs = localStorage.getItem('favorites')
+        if(storedFavs) setFavorites(JSON.parse(storedFavs)); 
     },[])
 
     useEffect(()=>{
-        localStorage.setItem('favorites', JSON.stringify(favorites))
+        if(favorites.length>0){
+            localStorage.setItem('favorites', JSON.stringify(favorites));
+        }
+        
     },[favorites])
 
     //update the favorite moves
