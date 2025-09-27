@@ -6,7 +6,10 @@
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
+.logo{
+  width: 50px;
+  border-radius: 10%;
+}
 .navbar-brand {
   font-size: 1.5rem;
   font-weight: bold;
